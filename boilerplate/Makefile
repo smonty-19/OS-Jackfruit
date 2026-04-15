@@ -34,8 +34,6 @@ monitor.ko: monitor.c monitor_ioctl.h
 clean:
 	if [ -d "$(KDIR)" ]; then $(MAKE) -C $(KDIR) M=$(PWD) clean; fi
 	rm -f $(USER_TARGETS) *.o *.mod *.mod.c *.symvers *.order
-	rm -f *.log
-	rm -rf logs
 	rm -f /tmp/mini_runtime.sock
 
 .PHONY: all ci module clean
